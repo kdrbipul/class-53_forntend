@@ -4,6 +4,8 @@ import './App.css'
 
 function App() {
   const [users, setUsers] = useState([])
+  
+  
   useEffect(()=>{
       fetch('http://localhost:5000/users')
       .then(res=>res.json())
@@ -30,8 +32,8 @@ function App() {
     .then(res =>res.json())
     .then(data => {
       console.log(data)
-       const newUser = [...users, data]
-       setUsers(newUser)
+      //  const newUser = [...users, data]
+      //  setUsers(newUser)
     })
 
    
